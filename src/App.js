@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+// ## Namaste React Course by Akshay Saini
+// Chapter 05 - Let's get Hooked!
 
-function App() {
+import React from "react";
+// import ReactDOM from "react-dom/client";
+import Header from "./Components/Header";
+import Body from "./Components/Body";
+import Footer from "./Components/Footer";
+
+/* My Food App structure will look like this, 
+            1) Header
+                - Logo
+                - Nav Items(right side)
+                - Cart
+            2) Body
+                - Search bar
+                - Restaurants List
+                    - Restaurant card
+                        - Image
+                        - Name
+                        - Rating
+            3) Footer
+                - Links
+                - Copyrights
+       
+*/
+
+// AppLayout component to render: Header, Body and Footer Component
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      <Body />
+      <Footer />
+    </React.Fragment>
   );
-}
-
+};
 export default App;
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<AppLayout />);
